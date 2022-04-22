@@ -130,7 +130,7 @@ def get_price(coin):
         actual_price = data['data'][coin_id]['quote']['USD']['price']
         actual_price = round(actual_price, 2)
         # Возвращение цены
-        return round(actual_price, 1)
+        return actual_price
     # Если CoinMarketCap не отвечает
     except (ConnectionError, Timeout, TooManyRedirects):
         logging.warning('CoinMarketCap не отвечает')
