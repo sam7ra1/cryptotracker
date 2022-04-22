@@ -301,9 +301,9 @@ def view(update, context):
         # i - название криптовалюты
         sum_ += get_price(i) * d[i]
         # Увеличение суммы и вывод сообщения на экран пользователю
-        update.message.reply_text(f'Монет {i} на сумму: {get_price(i) * d[i]}$')
+        update.message.reply_text(f'Монет {i} на сумму: {round(get_price(i) * d[i], 1)}$')
     # общая сумма
-    update.message.reply_text(f'Общая сумма ваших активов составляет: {sum_}$')
+    update.message.reply_text(f'Общая сумма ваших активов составляет: {round(sum_, 1)}$')
 
 
 # Запуск скрипта
